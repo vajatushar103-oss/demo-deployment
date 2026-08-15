@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JET Machines — precision tube working machinery by Janak Enterprises. Pipe cutting, chamfering, notching and automated industrial solutions.">
+  <title>JET Machines | Precision Tube Working Machinery</title>
+
+  <!-- Tailwind CSS CDN: ideal for a prototype/static mockup. For production, compile Tailwind locally. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jet: {
+              50: '#effcf5',
+              100: '#d9f9e7',
+              200: '#b8f1d0',
+              300: '#83e3b1',
+              400: '#46cf8c',
+              500: '#18b96f',
+              600: '#0d9859',
+              700: '#0b7949',
+              800: '#0c603d',
+              900: '#0a4f34'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 18px 60px rgba(15, 23, 42, .08)',
+            green: '0 18px 60px rgba(24, 185, 111, .20)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Progress -->
+  <div id="progressBar" class="fixed left-0 top-0 z-[100] h-1 w-0 bg-jet-500"></div>
+
+  <!-- Top utility bar -->
+  <div class="hidden border-b border-slate-200 bg-slate-950 text-slate-300 md:block">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs">
+      <p>Precision tube working machinery • Since 1978</p>
+      <div class="flex gap-5">
+        <a href="tel:+919975669481" class="hover:text-white">+91 99756 69481</a>
+        <a href="mailto:info@janakent.com" class="hover:text-white">info@janakent.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="siteHeader" class="sticky top-0 z-50 rounded-b-xl border-b border-slate-200/80 bg-white/90 backdrop-blur-xl transition-all">
+    <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between relative px-5 sm:px-6">
+      <a href="#home" class="flex items-center gap-3" aria-label="JET Machines home">
+        <div class="logo-mark">
+          <span>J</span>
+        </div>
+        <div class="leading-none">
+          <div class="font-display text-xl font-extrabold tracking-tight">JET<span class="text-jet-600"> MACHINES</span></div>
+          <div class="mt-1 text-[9px] font-semibold uppercase tracking-[.25em] text-slate-500">JANAK ENTERPRISES</div>
+        </div>
+      </a>
+
+      <div id="desktopNav" class="hidden items-center gap-8 lg:flex">
+        <a href="#home" class="nav-link active transition hover:scale-[1.1] text-lg active:scale-[0.9] active:text-jet-900 active:-rotate-2">Home</a>
+        <a href="#products" class="nav-link active transition hover:scale-[1.1] text-lg active:scale-[0.9] active:text-jet-900 active:-rotate-2">Products</a>
+        <a href="#about" class="nav-link active transition hover:scale-[1.1] text-lg active:scale-[0.9] active:text-jet-900 active:-rotate-2">About Us</a>
+        <a href="#industries" class="nav-link active transition hover:scale-[1.1] text-lg active:scale-[0.9] active:text-jet-900 active:-rotate-2">Industries</a>
+        <a href="#clients" class="nav-link active transition hover:scale-[1.1] text-lg active:scale-[0.9] active:text-jet-900 active:-rotate-2">Clients</a>
+        <a href="#contact" class="nav-link text-lg active transition hover:scale-[1.1] text-lg active:scale-[0.9] active:text-jet-900 active:-rotate-2">Contact</a>
+      </div>
+
+      <div class="hidden items-center gap-3 sm:flex">
+        <a href="#products" class="press-button rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold transition-all duration-200 ease-in-out hover:border-jet-500 hover:-translate-y-1 hover:scale-[1.05] active:text-jet-900 active:border-jet-900 active:-rotate-2 active:scale-[0.9] hover:text-jet-700">View Machines</a>
+        <a href="#contact" class="press-button rounded-full bg-jet-600 px-5 py-2.5 text-sm font-semibold text-white shadow-green transition-all duration-200 ease-in-out hover:border active:border-black active:bg-jet-900 active:scale-[0.9] active:-rotate-2 hover:border-1 hover:scale-[1.05] hover:border-jet-900 hover:-translate-y-1 hover:bg-jet-700">Get a Quote</a>
+      </div>
+
+      <button id="menuBtn" class="rounded-xl border hover:border hover:border-1 active:border-jet-900  transition active:scale-[0.9] hover:scale-[1.1] active:-rotate-2 hover:-translate-y-1 hover:border-jet-500 border-slate-200 p-2.5 lg:hidden" aria-label="Open menu" aria-expanded="false">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden border-t rounded-b-xl border-slate-200 bg-white px-5 absolute top-0 right-0 mt-20 pb-3 w-[50vw] lg:hidden">
+      <div class="flex flex-col gap-1 pt-3">
+        <a href="#home" class="mobile-link text-center border border-jet-200 transition-all ease-in-out duration-200 hover:scale-[1.025] hover:-translate-y-1 hover:border-jet-500 active:scale-[0.95] active:-rotate-2 active:bg-jet-400 active:text-white active:border-jet-950">Home</a>
+        <a href="#products" class="mobile-link text-center border border-jet-200 transition-all ease-in-out duration-200 hover:scale-[1.025] hover:-translate-y-1 hover:border-jet-500 active:scale-[0.95] active:-rotate-2 active:bg-jet-400 active:text-white active:border-jet-950">Products</a>
+        <a href="#about" class="mobile-link text-center border border-jet-200 transition-all ease-in-out duration-200 hover:scale-[1.025] hover:-translate-y-1 hover:border-jet-500 active:scale-[0.95] active:-rotate-2 active:bg-jet-400 active:text-white active:border-jet-950">About Us</a>
+        <a href="#industries" class="mobile-link text-center border border-jet-200 transition-all ease-in-out duration-200 hover:scale-[1.025] hover:-translate-y-1 hover:border-jet-500 active:scale-[0.95] active:-rotate-2 active:bg-jet-400 active:text-white active:border-jet-950">Industries</a>
+        <a href="#clients" class="mobile-link text-center border border-jet-200 transition-all ease-in-out duration-200 hover:scale-[1.025] hover:-translate-y-1 hover:border-jet-500 active:scale-[0.95] active:-rotate-2 active:bg-jet-400 active:text-white active:border-jet-950">Clients</a>
+        <a href="#contact" class="mobile-link text-center border border-jet-200 transition-all ease-in-out duration-200 hover:scale-[1.025] hover:-translate-y-1 hover:border-jet-500 active:scale-[0.95] active:-rotate-2 active:bg-jet-400 active:text-white active:border-jet-950">Contact</a>
+        <a href="#contact" class="mobile-link mt-2 rounded-xl bg-jet-500 px-4 py-3 text-center font-semibold text-white border border-1 border-jet-600 transition-all ease-in-out duration-200 hover:border-2 hover:border-jet-700 hover:bg-jet-400 hover:text-white hover:-translate-y-1 hover:scale-[1.05] active:border-jet-950 active:bg-jet-500 active:text-white active:-rotate-2 active:scale-[0.9]">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden bg-slate-950 rounded-b-xl">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-jet-600/20 blur-3xl"></div>
+      <div class="absolute -bottom-48 -left-24 h-[420px] w-[420px] rounded-full bg-emerald-400/10 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-20 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:py-28">
+        <div class="reveal">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[.16em] text-emerald-300">
+            <span class="pulse-dot"></span>
+            Precision engineering since 1978
+          </div>
+
+          <h1 class="max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl">
+            Machines built for
+            <span class="text-gradient">precision.</span>
+            Production built for scale.
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+            Tube and bar cutting, chamfering, notching and automated machining solutions engineered by JET Machines for demanding industrial production.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#products" class="group inline-flex items-center justify-center gap-2 rounded-full bg-jet-500 px-7 py-3.5 font-bold text-white shadow-green transition-all ease-in-out duration-200 hover:-translate-y-1 hover:scale-[1.05] hover:border hover:border-2 hover:border-jet-900 hover:bg-jet-400 active:border active-border-2 active:border-jet-300 active:scale-[0.9] active:-rotate-2 active:bg-jet-700">
+              Explore our machines
+              <svg class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-5-5 5 5-5 5"/></svg>
+            </a>
+            <a href="#about" class="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 font-bold text-white transition-all ease-in-out hover:bg-white/10 hover:border-2 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.9] active:bg-slate-950 active:-rotate-2">Why JET Machines?</a>
+          </div>
+
+          <div class="mt-12 grid max-w-xl grid-cols-3 gap-5 border-t border-white/10 pt-7">
+            <div><div class="counter text-2xl font-extrabold text-white" data-target="4000">0</div><div class="mt-1 text-xs text-slate-400">Domestic installations+</div></div>
+            <div><div class="counter text-2xl font-extrabold text-white" data-target="250">0</div><div class="mt-1 text-xs text-slate-400">Export installations+</div></div>
+            <div><div class="counter text-2xl font-extrabold text-white" data-target="48">0</div><div class="mt-1 text-xs text-slate-400">Years of engineering*</div></div>
+          </div>
+        </div>
+
+        <div class="reveal delay-2 relative">
+          <div class="machine-frame relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
+            <img class="hero-machine h-[430px] w-full object-cover sm:h-[520px]" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=85" alt="Industrial machinery placeholder">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-[.18em] text-emerald-300">Featured capability</div>
+                <div class="mt-1 text-xl font-bold text-white">Automated tube processing</div>
+              </div>
+              <div class="glass-badge">01 / 04</div>
+            </div>
+            <div class="scan-line"></div>
+          </div>
+
+          <div class="absolute -bottom-5 -left-5 hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-soft sm:block">
+            <div class="flex items-center gap-3">
+              <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-jet-50 text-jet-600">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.7" d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>
+              </div>
+              <div><div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Built around</div><div class="font-bold">Reliability + precision</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="border-b border-slate-200 bg-white rounded-b-xl">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-slate-200 sm:grid-cols-4">
+        <div class="px-5 py-7 text-center sm:px-8"><div class="text-sm font-bold text-slate-900">Engineering-led</div><div class="mt-1 text-xs text-slate-500">Industrial expertise</div></div>
+        <div class="px-5 py-7 text-center sm:px-8"><div class="text-sm font-bold text-slate-900">Quality checked</div><div class="mt-1 text-xs text-slate-500">Tested before delivery</div></div>
+        <div class="px-5 py-7 text-center sm:px-8"><div class="text-sm font-bold text-slate-900">Automation ready</div><div class="mt-1 text-xs text-slate-500">Servo & CNC solutions</div></div>
+        <div class="px-5 py-7 text-center sm:px-8"><div class="text-sm font-bold text-slate-900">Global reach</div><div class="mt-1 text-xs text-slate-500">India & international</div></div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="section-pad bg-slate-50">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6">
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="reveal">
+            <div class="eyebrow">Our capabilities</div>
+            <h2 class="section-title">Production machines for every <span class="text-jet-600">tube-working stage.</span></h2>
+          </div>
+          <p class="reveal max-w-xl text-sm leading-7 text-slate-600">From semi-automatic cutting to fully automatic servo and laser systems, JET Machines covers a broad range of tube and bar processing requirements.</p>
+        </div>
+
+        <div id="productGrid" class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Cards inserted by JS -->
+        </div>
+
+        <div class="mt-10 text-center">
+          <button id="loadMore" class="rounded-full border border-slate-300 bg-white px-7 py-3 font-semibold transition-all ease-in-out hover:border-jet-500 hover:text-jet-700 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.9] active:-rotate-2 active:border-jet-900 active:bg-jet-500 active:text-white">Show more machines</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-pad bg-white">
+      <div class="mx-auto grid max-w-7xl gap-14 px-5 sm:px-6 lg:grid-cols-[.92fr_1.08fr] lg:items-center">
+        <div class="reveal relative">
+          <div class="overflow-hidden rounded-[2rem]">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1gqn5YOxJtp3gSg1lNSAPRkeMBuOTuG1Vag6vxUbtDQ&s=10" alt="Industrial workshop placeholder" class="h-[530px] w-full object-cover transition duration-700 hover:scale-105">
+          </div>
+          <div class="absolute -bottom-7 -right-5 rounded-2xl bg-slate-950 p-6 text-white shadow-2xl sm:-right-7">
+            <div class="font-display text-4xl font-extrabold text-emerald-400">1978</div>
+            <div class="mt-1 text-xs uppercase tracking-[.18em] text-slate-400">Engineering roots</div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="eyebrow">About Janak Enterprises</div>
+          <h2 class="section-title">Engineering experience that turns into <span class="text-jet-600">production confidence.</span></h2>
+          <p class="mt-6 leading-8 text-slate-600">Janak Enterprises has operated in engineering and manufacturing since 1978. Since 2009, its focus has been tube-working machinery including pipe/bar cutting, chamfering and notching systems across manual, semi-automatic, automatic and fully automatic configurations.</p>
+          <p class="mt-4 leading-8 text-slate-600">The company reports a manufacturing facility of approximately 30,000 sq. ft. and a team of around 80 people, with products tested against internal quality standards before delivery.</p>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            <div class="feature-box"><span class="feature-icon">01</span><div><b>Precision engineering</b><p>Designed around repeatable industrial output.</p></div></div>
+            <div class="feature-box"><span class="feature-icon">02</span><div><b>Quality control</b><p>Machines are tested before reaching customers.</p></div></div>
+            <div class="feature-box"><span class="feature-icon">03</span><div><b>Automation options</b><p>Servo and fully automatic configurations.</p></div></div>
+            <div class="feature-box"><span class="feature-icon">04</span><div><b>Long-term support</b><p>Built for dependable customer partnerships.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="overflow-hidden bg-slate-950 py-20 rounded-xl">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6">
+        <div class="reveal max-w-2xl">
+          <div class="eyebrow !text-emerald-300">How we work</div>
+          <h2 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-5xl">From requirement to <span class="text-emerald-400">production.</span></h2>
+        </div>
+        <div class="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-4">
+          <div class="process-card reveal"><span>01</span><h3>Understand</h3><p>Application, material, dimensions and production targets.</p></div>
+          <div class="process-card reveal delay-1"><span>02</span><h3>Engineer</h3><p>Select the right machine architecture and automation level.</p></div>
+          <div class="process-card reveal delay-2"><span>03</span><h3>Build & test</h3><p>Manufacture, assemble and validate the machine.</p></div>
+          <div class="process-card reveal delay-3"><span>04</span><h3>Deliver</h3><p>Commission the solution and build a long-term partnership.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries -->
+    <section id="industries" class="section-pad bg-white">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6">
+        <div class="reveal max-w-3xl">
+          <div class="eyebrow">Industries we serve</div>
+          <h2 class="section-title">Machining solutions across <span class="text-jet-600">multiple industries.</span></h2>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="industry-card reveal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-0Ls6rJWMi_b6M_4mxKIR6Nr4iXQwXMSVhdxW3f7rhg&s=10" alt=""><div><span>01</span><h3>Automobile & Auto Ancillary</h3></div></div>
+          <div class="industry-card reveal delay-1"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=700&q=80" alt=""><div><span>02</span><h3>General Engineering</h3></div></div>
+          <div class="industry-card reveal delay-2"><img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=700&q=80" alt=""><div><span>03</span><h3>Construction Equipment</h3></div></div>
+          <div class="industry-card reveal delay-3"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=700&q=80" alt=""><div><span>04</span><h3>Furniture & Fabrication</h3></div></div>
+          <div class="industry-card reveal"><img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=700&q=80" alt=""><div><span>05</span><h3>Tube Industries</h3></div></div>
+          <div class="industry-card reveal delay-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAkN5Oc2biNCwMqlbctvgNp1ovMPV9bXpZRAtwoEhE_w&s=10" alt=""><div><span>06</span><h3>Brass Tube Industries</h3></div></div>
+          <div class="industry-card reveal delay-2"><img src="https://images.unsplash.com/photo-1599256872237-5dcc0fbe9668?auto=format&fit=crop&w=700&q=80" alt=""><div><span>07</span><h3>Copper / Aluminium</h3></div></div>
+          <div class="industry-card reveal delay-3"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80" alt=""><div><span>08</span><h3>Gym Equipment</h3></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-jet-600 rounded-xl">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 px-5 sm:px-6 lg:grid-cols-4">
+        <div class="stat-block"><div class="counter text-4xl font-extrabold text-white" data-target="4000">0</div><div>Domestic projects</div></div>
+        <div class="stat-block"><div class="counter text-4xl font-extrabold text-white" data-target="250">0</div><div>International projects</div></div>
+        <div class="stat-block"><div class="counter text-4xl font-extrabold text-white" data-target="80">0</div><div>Team members*</div></div>
+        <div class="stat-block"><div class="counter text-4xl font-extrabold text-white" data-target="150">0</div><div>Awards & recognition*</div></div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients" class="section-pad bg-slate-50">
+      <div class="mx-auto max-w-7xl px-5 text-center sm:px-6">
+        <div class="reveal">
+          <div class="eyebrow justify-center">Customer confidence</div>
+          <h2 class="section-title mx-auto max-w-3xl">Trusted by businesses that demand <span class="text-jet-600">consistency.</span></h2>
+          <p class="mx-auto mt-5 max-w-2xl text-slate-600">The original company website lists customers and OEM relationships including Kinetic Engineering, Godrej, TVS, Eicher, Force Motors and Bajaj Auto.</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div class="client-pill">
+            <img class="w-20 aspect-auto mr-3 mix-blend-multiply rounded-lg" src="baja_auto.jpeg" alt="">
+            <p>
+              BAJAJ AUTO
+            </p>
+          </div>
+          <div class="client-pill">
+            <img class="w-20 aspect-auto mr-3 mix-blend-multiply rounded-lg" src="tvs.png" alt="">
+            <p>
+              TVS
+            </p>
+          </div>
+          <div class="client-pill">
+            <img class="w-20 aspect-auto mr-3 mix-blend-multiply rounded-lg" src="eicher.jpeg" alt="">
+            <p>
+              EICHER
+            </p>
+          </div>
+          <div class="client-pill">
+            <img class="w-20 aspect-auto mr-3 mix-blend-multiply rounded-lg" src="force.jpeg" alt="">
+            <p>
+              FORCE
+            </p>
+          </div>
+          <div class="client-pill">
+            <img class="w-20 aspect-auto mr-3 mix-blend-multiply rounded-lg" src="godrej.jpeg" alt="">
+            <p>
+              GODREJ
+            </p>
+          </div>
+          <div class="client-pill">
+            <img class="w-20 aspect-auto mr-3 mix-blend-multiply rounded-lg" src="kinetic.jpeg" alt="">
+            <p>
+              KINETIC
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative overflow-hidden rounded-xl bg-slate-950 py-20">
+      <div class="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(24,185,111,.18),transparent_62%)]"></div>
+      <div class="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-5 sm:px-6 md:flex-row md:items-center">
+        <div class="reveal max-w-3xl">
+          <div class="eyebrow !text-emerald-300">Start your next project</div>
+          <h2 class="font-display text-3xl font-extrabold tracking-tight text-white sm:text-5xl">Tell us what you need to cut, chamfer or automate.</h2>
+          <p class="mt-5 leading-7 text-slate-400">Share your material, dimensions and production requirements. Our team can help identify the right machine category.</p>
+        </div>
+        <a href="#contact" class="shrink-0 rounded-full border border-jet-500 bg-jet-500 px-8 py-4 font-bold text-white shadow-green transition-all ease-in-out hover:-translate-y-1 hover:bg-jet-400 hover:border-jet-700 hover:border-2 hover:scale-[1.05] active:scale-[0.9] active:boder-2 active:border-jet-950 active:bg-jet-500 active:-rotate-2">Talk to JET Machines</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-pad bg-white">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[.8fr_1.2fr]">
+        <div class="reveal">
+          <div class="eyebrow">Contact</div>
+          <h2 class="section-title">Let's build a better <span class="text-jet-600">production line.</span></h2>
+          <p class="mt-5 leading-8 text-slate-600">Reach Janak Enterprises / JET Machines for machine enquiries, application discussions and quotations.</p>
+
+          <div class="mt-8 space-y-5">
+            <div class="contact-row"><div class="contact-icon">01</div><div><b>Manufacturing unit</b><p>Chitra GIDC, Bhavnagar, Gujarat 364004, India</p></div></div>
+            <div class="contact-row"><div class="contact-icon">02</div><div><b>Phone</b><p>+91 99756 69481 • +91 96246 73737</p></div></div>
+            <div class="contact-row"><div class="contact-icon">03</div><div><b>Email</b><p>info@janakent.com • vipul@janakent.com</p></div></div>
+          </div>
+        </div>
+
+        <form id="quoteForm" class="reveal rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-soft sm:p-8">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="field"><span>Name</span><input required name="name" placeholder="Your name"></label>
+            <label class="field"><span>Company</span><input name="company" placeholder="Company name"></label>
+            <label class="field"><span>Phone</span><input required name="phone" placeholder="+91 ..."></label>
+            <label class="field"><span>Email</span><input required type="email" name="email" placeholder="you@company.com"></label>
+            <label class="field sm:col-span-2"><span>Machine requirement</span><select name="machine"><option>Pipe / Bar Cutting</option><option>Chamfering</option><option>Notching</option><option>Aluminium Profile Cutting</option><option>Laser Tube Cutting</option><option>Wire De-burring</option><option>Other / Need consultation</option></select></label>
+            <label class="field sm:col-span-2"><span>Message</span><textarea required name="message" rows="5" placeholder="Tell us about material, tube size, quantity and automation requirement..."></textarea></label>
+          </div>
+          <button class="mt-6 w-full border border-1 border-jet-500 rounded-xl bg-jet-600 px-6 py-3.5 font-bold text-white transition-all ease-in-out hover:bg-jet-700 hover:border-2 hover:border-jet-700 hover:-translate-y-1 hover:scale-[1.05] active:border-2 active:border-jet-950 active:bg-jet-500 active:scale-[0.9] active:-rotate-2" type="submit">Send enquiry</button>
+          <p id="formMessage" class="mt-3 hidden text-center text-sm font-semibold text-jet-700"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 rounded-t-xl">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <div class="flex items-center gap-3 text-white">
+          <div class="logo-mark small"><span>J</span></div>
+          <div><div class="font-display text-xl font-extrabold">JET<span class="text-emerald-400"> MACHINES</span></div><div class="text-[9px] tracking-[.25em]">JANAK ENTERPRISES</div></div>
+        </div>
+        <p class="mt-5 max-w-md text-sm leading-7">Precision-engineered tube working machinery for cutting, chamfering, notching and automated production.</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-white">Explore</h3>
+        <div class="mt-4 space-y-3 text-sm"><a class="footer-link" href="#products">Products</a><a class="footer-link" href="#about">About Us</a><a class="footer-link" href="#industries">Industries</a><a class="footer-link" href="#contact">Contact</a></div>
+      </div>
+      <div>
+        <h3 class="font-bold text-white">Contact</h3>
+        <div class="mt-4 space-y-3 text-sm"><p>Bhavnagar, Gujarat, India</p><a class="footer-link" href="tel:+919975669481">+91 99756 69481</a><a class="footer-link" href="mailto:info@janakent.com">info@janakent.com</a></div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs sm:px-6 sm:flex-row sm:justify-between">
+        <p>© <span id="year"></span> Janak Enterprises / JET Machines. Redesign concept.</p>
+        <p>*Statistics shown are based on information published on the current company website.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backTop" class="fixed bottom-6 right-6 z-40 hidden h-12 w-12 rounded-full bg-slate-950 text-white shadow-xl transition-all ease-in-out duration-200 hover:-translate-y-1 hover:bg-slate-800 hover:border hover:border-2 hover:border-slate-950 hover:scale-[1.05] active:scale-[0.9] active:-roatate-2 active:bg-salte-950" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
