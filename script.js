@@ -1,265 +1,38 @@
-const products_v1 = [
-  {
-    name: "JE 315 Semi Automatic Pipe Cutting Machine",
-    category: "Pipe / Bar Cutting",
-    desc: "Compact production cutting solution for repeatable tube and bar processing.",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 375 Semi Automatic Pipe Cutting Machine",
-    category: "Pipe / Bar Cutting",
-    desc: "Robust semi-automatic cutting platform for industrial tube applications.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 375 ATS Servo Automatic Pipe Cutting Machine",
-    category: "Automatic / Servo",
-    desc: "Servo-driven automation for higher repeatability and production throughput.",
-    image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 485 2-Axis AT-S Automatic Servo Pipe / Bar Cutting",
-    category: "Automatic / Servo",
-    desc: "Advanced multi-axis automatic cutting for demanding production environments.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 350HA Aluminium Pipe / Profile Cutting Machine",
-    category: "Aluminium Cutting",
-    desc: "Purpose-built cutting solution for aluminium profiles, sections and tubes.",
-    image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE Dual Head Automatic Pipe / Bar Chamfering Machine",
-    category: "Chamfering",
-    desc: "Dual-head processing for efficient and consistent end preparation.",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 80AC Semi Automatic Pipe Chamfering Machine",
-    category: "Chamfering",
-    desc: "Semi-automatic chamfering platform for reliable tube-end preparation.",
-    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 50 Semi Automatic Pipe Notching Machine",
-    category: "Notching",
-    desc: "Dedicated notching machine for accurate tube preparation and fabrication.",
-    image: "https://images.unsplash.com/photo-1581092335397-9fa3414b3a5c?auto=format&fit=crop&w=900&q=82"
-  },
-  {
-    name: "JE 60 Automatic Laser Tube Cutting Machine",
-    category: "Laser Cutting",
-    desc: "Modern laser tube cutting for flexible, high-precision production.",
-    image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=82"
-  }
-];
-
-const products_v2 = [
-  {
-    name: "JE 315 Semi Automatic Pipe Cutting Machine",
-    category: "Pipe / Bar Cutting",
-    desc: "Compact production cutting solution for repeatable tube and bar processing.",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Cutting Diameter", "Ø 90 mm"],
-      ["Maximum Cutting Length", "500 mm"],
-      ["Minimum Cutting Length", "10 mm"],
-      ["Cutting Accuracy", "±0.10 mm"],
-      ["Saw Blade Diameter", "315 mm"],
-      ["Spindle Speed", "2800 RPM"],
-      ["Motor Power", "3 HP"],
-      ["Machine Weight", "650 kg"]
-    ]
-  },
-
-  {
-    name: "JE 375 Semi Automatic Pipe Cutting Machine",
-    category: "Pipe / Bar Cutting",
-    desc: "Robust semi-automatic cutting platform for industrial tube applications.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Cutting Diameter", "Ø 120 mm"],
-      ["Maximum Cutting Length", "600 mm"],
-      ["Minimum Cutting Length", "15 mm"],
-      ["Saw Blade Diameter", "375 mm"],
-      ["Spindle Speed", "2400 RPM"],
-      ["Motor Power", "5 HP"],
-      ["Coolant System", "Flood Cooling"],
-      ["Machine Weight", "850 kg"],
-      ["Approx. Dimensions", "1800 × 1200 × 1500 mm"]
-    ]
-  },
-
-  {
-    name: "JE 375 ATS Servo Automatic Pipe Cutting Machine",
-    category: "Automatic / Servo",
-    desc: "Servo-driven automation for higher repeatability and production throughput.",
-    image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Cutting Diameter", "Ø 100 mm"],
-      ["Maximum Material Length", "6000 mm"],
-      ["Minimum Cutting Length", "20 mm"],
-      ["Saw Blade Diameter", "375 mm"],
-      ["Servo Motor Power", "1.5 kW"],
-      ["Main Motor Power", "5 HP"],
-      ["Cutting Accuracy", "±0.05 mm"],
-      ["Automatic Feeding", "Servo Controlled"],
-      ["PLC System", "Industrial PLC"],
-      ["Machine Weight", "1250 kg"]
-    ]
-  },
-
-  {
-    name: "JE 485 2-Axis AT-S Automatic Servo Pipe / Bar Cutting",
-    category: "Automatic / Servo",
-    desc: "Advanced multi-axis automatic cutting for demanding production environments.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Cutting Diameter", "Ø 150 mm"],
-      ["Maximum Material Length", "6500 mm"],
-      ["Minimum Cutting Length", "25 mm"],
-      ["Saw Blade Diameter", "485 mm"],
-      ["Servo Axes", "2 Axis"],
-      ["Cutting Accuracy", "±0.05 mm"],
-      ["Main Motor Power", "7.5 HP"],
-      ["Servo Motor Power", "2 kW"],
-      ["Spindle Speed", "1800 RPM"],
-      ["Automatic Feeding", "Servo Controlled"],
-      ["Machine Weight", "1800 kg"],
-      ["Control System", "PLC + HMI"]
-    ]
-  },
-
-  {
-    name: "JE 350HA Aluminium Pipe / Profile Cutting Machine",
-    category: "Aluminium Cutting",
-    desc: "Purpose-built cutting solution for aluminium profiles, sections and tubes.",
-    image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Cutting Diameter", "Ø 120 mm"],
-      ["Maximum Profile Height", "150 mm"],
-      ["Saw Blade Diameter", "350 mm"],
-      ["Spindle Speed", "3000 RPM"],
-      ["Motor Power", "5 HP"],
-      ["Cutting Accuracy", "±0.10 mm"],
-      ["Material", "Aluminium / Non-Ferrous"],
-      ["Coolant System", "Mist / Spray"],
-      ["Machine Weight", "900 kg"]
-    ]
-  },
-
-  {
-    name: "JE Dual Head Automatic Pipe / Bar Chamfering Machine",
-    category: "Chamfering",
-    desc: "Dual-head processing for efficient and consistent end preparation.",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Pipe Diameter", "Ø 80 mm"],
-      ["Minimum Pipe Diameter", "Ø 20 mm"],
-      ["Chamfer Angle", "30° – 60°"],
-      ["Chamfering Heads", "2"],
-      ["Spindle Speed", "3000 RPM"],
-      ["Motor Power", "2 × 3 HP"],
-      ["Automatic Feeding", "Yes"],
-      ["Production Rate", "Up to 20 pcs/min"],
-      ["Machine Weight", "1100 kg"]
-    ]
-  },
-
-  {
-    name: "JE 80AC Semi Automatic Pipe Chamfering Machine",
-    category: "Chamfering",
-    desc: "Semi-automatic chamfering platform for reliable tube-end preparation.",
-    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Pipe Diameter", "Ø 80 mm"],
-      ["Minimum Pipe Diameter", "Ø 15 mm"],
-      ["Chamfer Angle", "30° – 60°"],
-      ["Spindle Speed", "2800 RPM"],
-      ["Motor Power", "3 HP"],
-      ["Operation", "Semi Automatic"],
-      ["Machine Weight", "550 kg"]
-    ]
-  },
-
-  {
-    name: "JE 50 Semi Automatic Pipe Notching Machine",
-    category: "Notching",
-    desc: "Dedicated notching machine for accurate tube preparation and fabrication.",
-    image: "https://images.unsplash.com/photo-1581092335397-9fa3414b3a5c?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Pipe Diameter", "Ø 50 mm"],
-      ["Minimum Pipe Diameter", "Ø 10 mm"],
-      ["Notching Width", "Up to 50 mm"],
-      ["Notching Depth", "Up to 25 mm"],
-      ["Spindle Speed", "2800 RPM"],
-      ["Motor Power", "3 HP"],
-      ["Operation", "Semi Automatic"],
-      ["Machine Weight", "450 kg"]
-    ]
-  },
-
-  {
-    name: "JE 60 Automatic Laser Tube Cutting Machine",
-    category: "Laser Cutting",
-    desc: "Modern laser tube cutting for flexible, high-precision production.",
-    image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=82",
-
-    specifications: [
-      ["Maximum Tube Diameter", "Ø 60 mm"],
-      ["Maximum Tube Length", "6000 mm"],
-      ["Laser Power", "2 kW"],
-      ["Laser Type", "Fiber Laser"],
-      ["Positioning Accuracy", "±0.03 mm"],
-      ["Re-positioning Accuracy", "±0.02 mm"],
-      ["Maximum Cutting Speed", "80 m/min"],
-      ["Chuck Type", "Pneumatic Chuck"],
-      ["Control System", "CNC"],
-      ["Machine Weight", "2500 kg"]
-    ]
-  }
-];
-
 const products = [
   {
-    name: "JE 315 Semi Automatic Pipe Cutting Machine",
+    name: "250 Hydraulic Cold Saw",
     category: "Pipe / Bar Cutting",
-    desc: "Compact production cutting solution for repeatable tube and bar processing.",
+    desc: "Heavy-duty hydraulic cold saw designed for precise cutting of steel tubes, pipes, solid bars and structural sections.",
 
     image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=82",
 
     images: [
       "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=90"
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=90"
     ],
 
     specifications: [
-      ["Maximum Cutting Diameter", "Ø 90 mm"],
-      ["Maximum Cutting Length", "500 mm"],
-      ["Minimum Cutting Length", "10 mm"],
-      ["Cutting Accuracy", "±0.10 mm"],
-      ["Saw Blade Diameter", "315 mm"],
-      ["Spindle Speed", "2800 RPM"],
-      ["Motor Power", "3 HP"],
-      ["Machine Weight", "650 kg"]
+      ["Machine Type", "Hydraulic Cold Saw"],
+      ["Maximum Round Cutting Capacity", "Ø 80 mm"],
+      ["Maximum Square Cutting Capacity", "65 × 65 mm"],
+      ["Maximum Rectangular Cutting Capacity", "100 × 50 mm"],
+      ["Saw Blade Diameter", "250 mm"],
+      ["Blade Bore", "32 mm"],
+      ["Spindle Speed", "3000 RPM"],
+      ["Main Motor Power", "3 HP"],
+      ["Hydraulic Motor Power", "1 HP"],
+      ["Material", "Mild Steel / Stainless Steel"],
+      ["Cutting Angle", "90°"],
+      ["Coolant System", "Flood Cooling"],
+      ["Machine Weight", "Approx. 720 kg"]
     ]
   },
 
   {
-    name: "JE 375 Semi Automatic Pipe Cutting Machine",
-    category: "Pipe / Bar Cutting",
-    desc: "Robust semi-automatic cutting platform for industrial tube applications.",
+    name: "400 Heavy Duty Circular Saw",
+    category: "Heavy Duty Cutting",
+    desc: "Industrial circular saw built for continuous production cutting of heavy steel pipes, bars and fabricated sections.",
 
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=82",
 
@@ -270,22 +43,26 @@ const products = [
     ],
 
     specifications: [
-      ["Maximum Cutting Diameter", "Ø 120 mm"],
-      ["Maximum Cutting Length", "600 mm"],
-      ["Minimum Cutting Length", "15 mm"],
-      ["Saw Blade Diameter", "375 mm"],
-      ["Spindle Speed", "2400 RPM"],
-      ["Motor Power", "5 HP"],
-      ["Coolant System", "Flood Cooling"],
-      ["Machine Weight", "850 kg"],
-      ["Approx. Dimensions", "1800 × 1200 × 1500 mm"]
+      ["Machine Type", "Heavy Duty Circular Saw"],
+      ["Maximum Round Cutting Capacity", "Ø 130 mm"],
+      ["Maximum Square Cutting Capacity", "110 × 110 mm"],
+      ["Maximum Rectangular Cutting Capacity", "160 × 100 mm"],
+      ["Saw Blade Diameter", "400 mm"],
+      ["Blade Bore", "40 mm"],
+      ["Spindle Speed", "1800 RPM"],
+      ["Main Motor Power", "7.5 HP"],
+      ["Vice Type", "Hydraulic"],
+      ["Cutting Angle", "90°"],
+      ["Coolant System", "Automatic Flood Cooling"],
+      ["Material", "MS / SS / Alloy Steel"],
+      ["Machine Weight", "Approx. 1350 kg"]
     ]
   },
 
   {
-    name: "JE 375 ATS Servo Automatic Pipe Cutting Machine",
-    category: "Automatic / Servo",
-    desc: "Servo-driven automation for higher repeatability and production throughput.",
+    name: "350 CNC Automatic Tube Cutting System",
+    category: "CNC Cutting",
+    desc: "CNC-controlled tube cutting system offering automated feeding, positioning and batch cutting for high-volume manufacturing.",
 
     image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=82",
 
@@ -293,58 +70,61 @@ const products = [
       "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1581092335397-9fa3414b3a5c?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=90"
+      "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1400&q=90"
     ],
 
     specifications: [
-      ["Maximum Cutting Diameter", "Ø 100 mm"],
+      ["Machine Type", "CNC Automatic Tube Cutting"],
+      ["Maximum Tube Diameter", "Ø 100 mm"],
+      ["Maximum Square Tube", "80 × 80 mm"],
       ["Maximum Material Length", "6000 mm"],
-      ["Minimum Cutting Length", "20 mm"],
-      ["Saw Blade Diameter", "375 mm"],
-      ["Servo Motor Power", "1.5 kW"],
+      ["Minimum Cut Length", "10 mm"],
+      ["Saw Blade Diameter", "350 mm"],
+      ["Blade Bore", "40 mm"],
       ["Main Motor Power", "5 HP"],
-      ["Cutting Accuracy", "±0.05 mm"],
-      ["Automatic Feeding", "Servo Controlled"],
-      ["PLC System", "Industrial PLC"],
-      ["Machine Weight", "1250 kg"]
+      ["Feeding Motor", "Servo Motor"],
+      ["Positioning Accuracy", "±0.05 mm"],
+      ["Repeatability", "±0.03 mm"],
+      ["Control System", "CNC + HMI"],
+      ["Coolant System", "Flood Cooling"],
+      ["Machine Weight", "Approx. 1600 kg"]
     ]
   },
 
   {
-    name: "JE 485 2-Axis AT-S Automatic Servo Pipe / Bar Cutting",
-    category: "Automatic / Servo",
-    desc: "Advanced multi-axis automatic cutting for demanding production environments.",
+    name: "500 Twin Column Band Saw",
+    category: "Band Sawing",
+    desc: "Twin-column horizontal band saw developed for stable and accurate cutting of large diameter pipes, bars and metal sections.",
 
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=82",
 
     images: [
       "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=90"
+      "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1400&q=90"
     ],
 
     specifications: [
-      ["Maximum Cutting Diameter", "Ø 150 mm"],
-      ["Maximum Material Length", "6500 mm"],
-      ["Minimum Cutting Length", "25 mm"],
-      ["Saw Blade Diameter", "485 mm"],
-      ["Servo Axes", "2 Axis"],
-      ["Cutting Accuracy", "±0.05 mm"],
+      ["Machine Type", "Twin Column Horizontal Band Saw"],
+      ["Maximum Round Capacity", "Ø 500 mm"],
+      ["Maximum Square Capacity", "500 × 500 mm"],
+      ["Blade Size", "41 × 1.3 mm"],
+      ["Blade Length", "5200 mm"],
+      ["Blade Speed Range", "20 – 80 m/min"],
       ["Main Motor Power", "7.5 HP"],
-      ["Servo Motor Power", "2 kW"],
-      ["Spindle Speed", "1800 RPM"],
-      ["Automatic Feeding", "Servo Controlled"],
-      ["Machine Weight", "1800 kg"],
-      ["Control System", "PLC + HMI"]
+      ["Hydraulic Motor", "2 HP"],
+      ["Vice Type", "Hydraulic"],
+      ["Blade Tension", "Hydraulic"],
+      ["Coolant System", "Flood Cooling"],
+      ["Control", "PLC Controlled"],
+      ["Machine Weight", "Approx. 3200 kg"]
     ]
   },
 
   {
-    name: "JE 350HA Aluminium Pipe / Profile Cutting Machine",
+    name: "320 Aluminium Profile Saw",
     category: "Aluminium Cutting",
-    desc: "Purpose-built cutting solution for aluminium profiles, sections and tubes.",
+    desc: "High-speed precision saw for cutting aluminium profiles, extrusion sections and non-ferrous components with clean finishes.",
 
     image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=900&q=82",
 
@@ -355,49 +135,56 @@ const products = [
     ],
 
     specifications: [
-      ["Maximum Cutting Diameter", "Ø 120 mm"],
-      ["Maximum Profile Height", "150 mm"],
-      ["Saw Blade Diameter", "350 mm"],
-      ["Spindle Speed", "3000 RPM"],
-      ["Motor Power", "5 HP"],
-      ["Cutting Accuracy", "±0.10 mm"],
-      ["Material", "Aluminium / Non-Ferrous"],
-      ["Coolant System", "Mist / Spray"],
-      ["Machine Weight", "900 kg"]
+      ["Machine Type", "High Speed Aluminium Profile Saw"],
+      ["Maximum Round Cutting", "Ø 110 mm"],
+      ["Maximum Square Cutting", "90 × 90 mm"],
+      ["Maximum Profile Width", "180 mm"],
+      ["Saw Blade Diameter", "320 mm"],
+      ["Blade Bore", "30 mm"],
+      ["Spindle Speed", "3200 RPM"],
+      ["Main Motor Power", "5 HP"],
+      ["Cutting Angle", "90° / 45°"],
+      ["Clamping", "Pneumatic"],
+      ["Coolant System", "Mist Lubrication"],
+      ["Material", "Aluminium / Brass / Copper"],
+      ["Machine Weight", "Approx. 780 kg"]
     ]
   },
 
   {
-    name: "JE Dual Head Automatic Pipe / Bar Chamfering Machine",
+    name: "100 Hydraulic Pipe End Chamfering Machine",
     category: "Chamfering",
-    desc: "Dual-head processing for efficient and consistent end preparation.",
+    desc: "Hydraulic pipe end chamfering machine designed for fast and consistent preparation of tube and pipe ends before welding or assembly.",
 
     image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=82",
 
     images: [
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581092335397-9fa3414b3a5c?auto=format&fit=crop&w=1400&q=90"
+      "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1400&q=90"
     ],
 
     specifications: [
-      ["Maximum Pipe Diameter", "Ø 80 mm"],
-      ["Minimum Pipe Diameter", "Ø 20 mm"],
-      ["Chamfer Angle", "30° – 60°"],
-      ["Chamfering Heads", "2"],
-      ["Spindle Speed", "3000 RPM"],
-      ["Motor Power", "2 × 3 HP"],
-      ["Automatic Feeding", "Yes"],
-      ["Production Rate", "Up to 20 pcs/min"],
-      ["Machine Weight", "1100 kg"]
+      ["Machine Type", "Hydraulic Pipe End Chamfering"],
+      ["Pipe Diameter Range", "Ø 25 – 100 mm"],
+      ["Maximum Wall Thickness", "10 mm"],
+      ["Chamfer Type", "External / Internal"],
+      ["Chamfer Angle", "30° – 45°"],
+      ["Number of Cutting Heads", "2"],
+      ["Spindle Speed", "2200 RPM"],
+      ["Main Motor Power", "5 HP"],
+      ["Hydraulic Motor", "2 HP"],
+      ["Clamping", "Hydraulic"],
+      ["Operation", "Semi Automatic"],
+      ["Material", "MS / SS / Alloy Steel"],
+      ["Machine Weight", "Approx. 950 kg"]
     ]
   },
 
   {
-    name: "JE 80AC Semi Automatic Pipe Chamfering Machine",
+    name: "65 Compact Tube Chamfering Machine",
     category: "Chamfering",
-    desc: "Semi-automatic chamfering platform for reliable tube-end preparation.",
+    desc: "Compact production chamfering machine for economical and repeatable finishing of small and medium diameter tubes.",
 
     image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=900&q=82",
 
@@ -408,44 +195,55 @@ const products = [
     ],
 
     specifications: [
-      ["Maximum Pipe Diameter", "Ø 80 mm"],
-      ["Minimum Pipe Diameter", "Ø 15 mm"],
+      ["Machine Type", "Semi Automatic Tube Chamfering"],
+      ["Pipe Diameter Range", "Ø 12 – 65 mm"],
+      ["Maximum Wall Thickness", "6 mm"],
+      ["Chamfer Type", "External"],
       ["Chamfer Angle", "30° – 60°"],
-      ["Spindle Speed", "2800 RPM"],
+      ["Spindle Speed", "3000 RPM"],
       ["Motor Power", "3 HP"],
+      ["Clamping", "Pneumatic"],
       ["Operation", "Semi Automatic"],
-      ["Machine Weight", "550 kg"]
+      ["Material", "MS / SS / Aluminium"],
+      ["Lubrication", "Manual / Optional Mist"],
+      ["Machine Weight", "Approx. 420 kg"]
     ]
   },
 
   {
-    name: "JE 50 Semi Automatic Pipe Notching Machine",
+    name: "40 Tube End Notching Machine",
     category: "Notching",
-    desc: "Dedicated notching machine for accurate tube preparation and fabrication.",
+    desc: "Production tube notching machine for preparing accurate saddle and end profiles used in tubular fabrication and furniture applications.",
 
     image: "https://images.unsplash.com/photo-1581092335397-9fa3414b3a5c?auto=format&fit=crop&w=900&q=82",
 
     images: [
       "https://images.unsplash.com/photo-1581092335397-9fa3414b3a5c?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=90"
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=90",
+      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=90"
     ],
 
     specifications: [
-      ["Maximum Pipe Diameter", "Ø 50 mm"],
-      ["Minimum Pipe Diameter", "Ø 10 mm"],
-      ["Notching Width", "Up to 50 mm"],
-      ["Notching Depth", "Up to 25 mm"],
+      ["Machine Type", "Tube End Notching Machine"],
+      ["Maximum Tube Diameter", "Ø 40 mm"],
+      ["Minimum Tube Diameter", "Ø 10 mm"],
+      ["Maximum Tube Wall Thickness", "3 mm"],
+      ["Notching Width", "Up to 40 mm"],
+      ["Notching Depth", "Up to 20 mm"],
       ["Spindle Speed", "2800 RPM"],
-      ["Motor Power", "3 HP"],
+      ["Motor Power", "2 HP"],
+      ["Clamping", "Pneumatic"],
       ["Operation", "Semi Automatic"],
-      ["Machine Weight", "450 kg"]
+      ["Material", "MS / SS / Aluminium"],
+      ["Application", "Furniture / Fabrication / Frames"],
+      ["Machine Weight", "Approx. 350 kg"]
     ]
   },
 
   {
-    name: "JE 60 Automatic Laser Tube Cutting Machine",
+    name: "FiberTube 3015 CNC Laser Cutting Machine",
     category: "Laser Cutting",
-    desc: "Modern laser tube cutting for flexible, high-precision production.",
+    desc: "CNC fiber laser system for precision cutting of tubes and profiles, suitable for fabrication, automotive components and industrial production.",
 
     image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=82",
 
@@ -453,22 +251,25 @@ const products = [
       "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=90",
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1400&q=90",
-      "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1400&q=90"
+      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=90"
     ],
 
     specifications: [
-      ["Maximum Tube Diameter", "Ø 60 mm"],
+      ["Machine Type", "CNC Fiber Laser Tube Cutter"],
+      ["Maximum Round Tube Diameter", "Ø 150 mm"],
+      ["Maximum Square Tube", "100 × 100 mm"],
       ["Maximum Tube Length", "6000 mm"],
-      ["Laser Power", "2 kW"],
-      ["Laser Type", "Fiber Laser"],
+      ["Laser Source", "Fiber Laser"],
+      ["Laser Power", "3 kW"],
+      ["Laser Wavelength", "1070 nm"],
       ["Positioning Accuracy", "±0.03 mm"],
-      ["Re-positioning Accuracy", "±0.02 mm"],
-      ["Maximum Cutting Speed", "80 m/min"],
-      ["Chuck Type", "Pneumatic Chuck"],
-      ["Control System", "CNC"],
-      ["Machine Weight", "2500 kg"]
+      ["Repeatability", "±0.02 mm"],
+      ["Maximum Cutting Speed", "Up to 60 m/min"],
+      ["Chuck Type", "Pneumatic Rotary Chuck"],
+      ["Drive System", "Servo Drive"],
+      ["Control System", "CNC Controller"],
+      ["Material", "MS / SS / Aluminium"],
+      ["Machine Weight", "Approx. 2800 kg"]
     ]
   }
 ];
@@ -487,13 +288,13 @@ function renderProducts() {
           <div>
             <span class="product-tag">${p.category}</span>
           </div>
-          <span class="glass-badge">JET</span>
+          <span class="glass-badge">PRIME</span>
         </div>
       </div>
       <div class="p-6">
         <h3 class="font-display text-lg font-extrabold leading-snug text-slate-900">${p.name}</h3>
         <p class="mt-3 text-sm leading-6 text-slate-500">${p.desc}</p>
-        <button onClick="showProductDetails(${i})" class="bg-jet-500 text-white border border-2 border-jet-700 rounded-lg py-2 px-4 transition-all ease-in-out duration-200 hover:border-jet-500 hover:bg-jet-400 hover:text-white hover:-translate-y-1 hover:scale-[1.05] active:text-white active:border-jet-900 active:bg-jet-600 active:scale-[0.9] active:-rotate-2">
+        <button onClick="showProductDetails(${i})" class="bg-PRIME-500 text-white border border-2 border-PRIME-700 rounded-lg py-2 px-4 transition-all ease-in-out duration-200 hover:border-PRIME-500 hover:bg-PRIME-400 hover:text-white hover:-translate-y-1 hover:scale-[1.05] active:text-white active:border-PRIME-900 active:bg-PRIME-600 active:scale-[0.9] active:-rotate-2">
           See Details
         </button>
       </div>
@@ -503,9 +304,9 @@ function renderProducts() {
            opacity-0 pointer-events-none scale-95
            transition-all duration-300 ease-out
            bg-white w-[90vw] h-[75vh] ml-[5vw] mt-[12.5vh]
-           border-4 border-jet-500 rounded-[2.5%]">
+           border-4 border-PRIME-500 rounded-[2.5%]">
 
-        <div class="flex flex-row text-black justify-between border-b-4 border-jet-500 py-2 px-4">
+        <div class="flex flex-row text-black justify-between border-b-4 border-PRIME-500 py-2 px-4">
           <div>
             <span class="text-slate-700 text-lg font-bold">
               FULL DETAILS 
@@ -560,7 +361,7 @@ function renderProducts() {
                           text-slate-800 shadow-lg
                           flex items-center justify-center
                           transition-all duration-200
-                          hover:bg-jet-500 hover:text-white
+                          hover:bg-PRIME-500 hover:text-white
                           hover:scale-110
                           active:scale-90
                           disabled:opacity-0 disabled:pointer-events-none"
@@ -581,7 +382,7 @@ function renderProducts() {
                           text-slate-800 shadow-lg
                           flex items-center justify-center
                           transition-all duration-200
-                          hover:bg-jet-500 hover:text-white
+                          hover:bg-PRIME-500 hover:text-white
                           hover:scale-110
                           active:scale-90
                           disabled:opacity-0 disabled:pointer-events-none"
@@ -714,16 +515,16 @@ function renderProducts() {
           </div>
 
           <table class="mt-5 mx-auto w-full bg-white text-center
-             border-2 border-jet-200 rounded-xl overflow-hidden
+             border-2 border-PRIME-200 rounded-xl overflow-hidden
              border-separate border-spacing-0">
 
             <thead>
               <tr>
-                <th class="border-b border-r border-jet-200 bg-jet-50 font-bold p-3">
+                <th class="border-b border-r border-PRIME-200 bg-PRIME-50 font-bold p-3">
                   PROPERTY
                 </th>
 
-                <th class="border-b border-jet-200 bg-jet-50 font-bold p-3">
+                <th class="border-b border-PRIME-200 bg-PRIME-50 font-bold p-3">
                   VALUE
                 </th>
               </tr>
@@ -733,11 +534,11 @@ function renderProducts() {
               ${p.specifications.map(([property, value], rowIndex) => `
                 <tr class="${rowIndex % 2 === 0 ? 'bg-white' : 'bg-slate-50'}">
 
-                  <td class="border-b border-r border-jet-200 p-3 font-medium">
+                  <td class="border-b border-r border-PRIME-200 p-3 font-medium">
                     ${property}
                   </td>
 
-                  <td class="border-b border-jet-200 p-3">
+                  <td class="border-b border-PRIME-200 p-3">
                     ${value}
                   </td>
 
