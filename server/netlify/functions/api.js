@@ -1,14 +1,7 @@
-const express = require("express");
-const serverless = require("serverless-http");
+import serverless from "serverless-http";
+import { app } from "../../src/app.js";
+import { connectDB } from "../../src/config/db.js";
 
-const app = express();
+await connectDB();
 
-app.use(express.json());
-
-app.get("/api/test", (req, res) => {
-    res.json({
-        message: "API is working!"
-    });
-});
-
-module.exports.handler = serverless(app);
+export const handler = serverless(app);
