@@ -37,6 +37,16 @@ app.use('/api/products', productRoutes);
 app.use('/api/enquiries', enquiryRoutes);
 app.use('/api/videos', videoRoutes);
 
+app.use((req, res, next) => {
+    console.log("========== API REQUEST ==========");
+    console.log("Method:", req.method);
+    console.log("URL:", req.originalUrl);
+    console.log("Origin:", req.headers.origin);
+    console.log("=================================");
+
+    next();
+});
+
 app.use(notFound);
 app.use(errorHandler);
 
