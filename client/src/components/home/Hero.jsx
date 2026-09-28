@@ -51,10 +51,16 @@ export default function Hero() {
         <Reveal delay="delay-2" className="relative">
           <div className="machine-frame relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900 shadow-2xl">
             {/* <img className="hero-machine h-[430px] w-full object-cover sm:h-[520px]" src={DEMO_VIDEO} alt="Industrial machinery" /> */}
+
               {/* <video className="hero-machine h-[430px] w-full object-cover sm:h-[520px]" autoPlay muted>
                 <source src={DEMO_VIDEO} type="video/mp4" />
               </video> */}
-              <SmartVideo
+
+              <video className="hero-machine h-[430px] w-full object-cover sm:h-[520px]" autoPlay muted>
+                <source src="https://www.youtube.com/watch?v=zBjJUV-lzHo" type="video/mp4" />
+              </video>
+
+              {/* <SmartVideo
                   className="absolute inset-0"
                   poster="/images/hero-poster.jpg"
                   autoPlay
@@ -62,7 +68,8 @@ export default function Hero() {
                   loop
                   playsInline
                   preload="metadata"
-              />
+              /> */}
+
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
               <div>
