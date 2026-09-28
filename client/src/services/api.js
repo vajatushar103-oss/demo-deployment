@@ -77,7 +77,7 @@ export const userService = {
   update: async (id, payload) => {
     // await request(`/api/admin/updateUser/${id}`, { method: 'PATCH', body: JSON.stringify(payload)})
     await api.patch(
-        `/api/admin/updateUser/${id}`,
+        `/admin/updateUser/${id}`,
         payload
       );
       // console.log("==========================CLIENT_CHECKPOINT==========================")
@@ -98,7 +98,7 @@ export const userServiceUpdateUser = async (id, payload) => {
 
 
     const response = await api.patch(
-      `/api/admin/updateUser/${id}`,
+      `/admin/updateUser/${id}`,
       payload
     );
 
@@ -120,29 +120,5 @@ export const userServiceUpdateUser = async (id, payload) => {
     throw error;
   }
 };
-
-// export const userServiceUpdateUserAccess = async (id, payload) => {
-//   try {
-//     const response = await api.patch(
-//       `/api/admin/updateUser/${id}`,
-//       payload
-//     );
-
-//     // console.log(
-//     //   "DATA AT client/src/services/api.js => userServiceUpdateUser():",
-//     //   response.data
-//     // );
-
-//     return response.data;
-//   } catch (error) {
-//     console.error(
-//       "ERROR AT client/src/services/api.js => userServiceUpdateUser():",
-//       error
-//     );
-
-//     throw error;
-//   }
-// };
-
 
 

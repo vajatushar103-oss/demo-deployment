@@ -20,7 +20,7 @@ export async function login({email, password}){
 
     try{
 
-        const response = await api.post("/api/auth/login",{
+        const response = await api.post("/auth/login",{
             email, password
         });
 
@@ -35,7 +35,7 @@ export async function login({email, password}){
 
 export async function logout(){
     try{
-        await api.get("/api/auth/logout");
+        await api.get("/auth/logout");
     }catch(err){
         console.log("ERROR IN client/src/services/auth.api.js. ERROR: " + err);
     }
@@ -46,7 +46,7 @@ export async function  getMe() {
 
     try{
 
-        const response = await api.get("/api/auth/getMe");
+        const response = await api.get("/auth/getMe");
         return response.data;
 
     }catch(err){
@@ -61,7 +61,7 @@ export async function tempAdminUsers() {
 
         // console.log("==========================CLIENT_CHECKPOINT==========================");
 
-        const response = await api.get("/api/admin/users");
+        const response = await api.get("/admin/users");
         return response.data;
 
     }catch(err){

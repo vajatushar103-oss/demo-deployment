@@ -15,4 +15,6 @@ const productSchema = new mongoose.Schema({
   slug: { type: String, unique: true, index: true }
 }, { timestamps: true });
 
-export default mongoose.model('Product', productSchema);
+const Product = mongoose.model('Product', productSchema);
+
+export { Product };
