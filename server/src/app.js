@@ -4,11 +4,11 @@ import cors from 'cors';
 
 import { env } from './config/env.js';
 
-import productRoutes from './routes/productRoutes.js';
-import enquiryRoutes from './routes/enquiryRoutes.js';
-import authRoutes from './routes/authRoutes.js';
-import adminRoutes from './routes/adminRoutes.js';
-import videoRoutes from './routes/video.routes.js';
+import { router as productRoutes } from './routes/productRoutes.js';
+import { router as enquiryRoutes } from './routes/enquiryRoutes.js';
+import { router as authRoutes } from './routes/authRoutes.js';
+import { router as adminRoutes } from './routes/adminRoutes.js';
+import { router as videoRoutes } from './routes/video.routes.js';
 
 import { notFound } from './middleware/notFound.js';
 import { errorHandler } from './middleware/errorHandler.js';

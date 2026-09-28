@@ -12,4 +12,4 @@ router.get('/users', getUsers);
 router.post('/', createUser);
 router.patch('/updateUser/:id', updateUser);
 
-export default router;
+export { router };

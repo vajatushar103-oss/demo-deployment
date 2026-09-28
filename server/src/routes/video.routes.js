@@ -26,4 +26,4 @@ router.get(
     streamVideo
 );
 
-export default router;
+export { router };
