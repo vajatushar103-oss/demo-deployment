@@ -3,6 +3,7 @@ import Reveal from '../common/Reveal';
 import { useCounter } from '../../hooks/useCounter';
 // import DEMO_VIDEO from "../../assets/DEMO_VIDEO.mp4";
 import SmartVideo from '../common/SmartVideo.jsx';
+import homePageVideo from "../../assets/homepage.mp4"
 
 function HeroCounter({ target, label, plus = false }) {
   const [ref, value] = useCounter(target);
@@ -56,8 +57,8 @@ export default function Hero() {
                 <source src={DEMO_VIDEO} type="video/mp4" />
               </video> */}
 
-              <video className="hero-machine h-[430px] w-full object-cover sm:h-[520px]" autoPlay muted>
-                <source src="https://www.youtube.com/watch?v=zBjJUV-lzHo" type="video/mp4" />
+              <video className="hero-machine h-[430px] w-full object-cover sm:h-[520px]" autoPlay loop muted>
+                <source src={homePageVideo} type="video/mp4" />
               </video>
 
               {/* <SmartVideo
