@@ -1,4 +1,4 @@
-import Enquiry from '../models/Enquiry.js';
+import {Enquiry} from '../models/Enquiry.js';
 
 export async function createEnquiry(req, res, next) {
   try {
